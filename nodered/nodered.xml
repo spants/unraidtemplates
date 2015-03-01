@@ -14,8 +14,14 @@
   <Privileged>false</Privileged>
   <Environment/>
   <Networking>
-    <Mode>host</Mode>
-    <Publish />
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>1880</HostPort>
+        <ContainerPort>1880</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
   </Networking>
   <Data>
     <Volume>
