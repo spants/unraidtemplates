@@ -31,6 +31,6 @@
     </Volume>
   </Data>
   <WebUI>http://[IP]:[PORT:1880]</WebUI>
-  <Banner>https://raw.githubusercontent.com/spants/unraidtemplates/master/nodered/nodered-icon.png</Banner>
-  <Icon>https://raw.githubusercontent.com/spants/unraidtemplates/master/nodered/nodered-icon.png</Icon>
+  <Banner>http://i.imgur.com/zXpacAF.png</Banner>
+  <Icon>http://i.imgur.com/zXpacAF.png</Icon>
 </Container>
