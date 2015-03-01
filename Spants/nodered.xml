@@ -2,8 +2,11 @@
 <Container>
   <Name>NodeRed</Name>
   <Description>
-    NodeRed description here.[br][br]
+    Node-RED is a visual tool for wiring the Internet of Things[br][br]
+    Node-RED is a tool for wiring together hardware devices, APIs and online services in new and interesting ways.[br][br]
+    See NodeRed.org and flows.nodered.org for more info. [br][br]
     NodeRed will run on port 1880.[br][br]
+    I have installed Core and a few selected extra Nodes for this Docker.[br][br]
     [b][span style='color: #E80000;']Directions:[/span][/b][br]
     [b]/data[/b] : in this path, Node Red will store it's configuration files.
   </Description>
