@@ -1,1 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Name>MQTT</Name>
+  <Description>
+    MQTT for Unraid6 Docker Manager running on Port 1883[br][br]
 
+  </Description>
+  <Registry>https://registry.hub.docker.com/u/spants/mqtt/</Registry>
+  <GitHub>https://github.com/spants/unraidtemplates</GitHub>
+  <Repository>spants/mqtt</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>1883</HostPort>
+        <ContainerPort>1883</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+    </Volume>
+  </Data>
+  <WebUI>http://mqtt.org/</WebUI>
+  <Banner>http://i.imgur.com/Cc9Jkcr.png</Banner>
+  <Icon>http://i.imgur.com/Cc9Jkcr.png</Icon>
+</Container>
