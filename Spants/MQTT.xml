@@ -3,7 +3,14 @@
   <Name>MQTT</Name>
   <Description>
     MQTT for Unraid6 Docker Manager running on Port 1883[br][br]
-
+    MQTT is a machine-to-machine (M2M)/"Internet of Things" connectivity protocol. [br]
+    It was designed as an extremely lightweight publish/subscribe messaging transport. [br]
+    It is useful for connections with remote locations where a small code footprint is required [br]
+    and/or network bandwidth is at a premium. For example, it has been used in sensors [br]
+    communicating to a broker via satellite link, over occasional dial-up connections with [br]
+    healthcare providers, and in a range of home automation and small device scenarios. [br]
+    It is also ideal for mobile applications because of its small size, low power usage, [br]
+    minimised data packets, and efficient distribution of information to one or many receivers[br]
   </Description>
   <Registry>https://registry.hub.docker.com/u/spants/mqtt/</Registry>
   <GitHub>https://github.com/spants/unraidtemplates</GitHub>
