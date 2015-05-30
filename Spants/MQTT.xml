@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container>
+  <Beta>False</Beta>
+<Category>HomeAutomation:</Category>
   <Name>MQTT</Name>
   <Description>
     MQTT for Unraid6 Docker Manager running on Port 1883[br][br]
