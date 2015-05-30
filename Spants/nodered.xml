@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container>
+  <Beta>False</Beta>
+<Category>HomeAutomation:</Category>
   <Name>NodeRed</Name>
   <Description>
     Node-RED is a visual tool for wiring the Internet of Things[br][br]
