@@ -22,7 +22,6 @@
   <Repository>spants/nodered</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
-  <Environment/>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
@@ -35,7 +34,7 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/disk9/docker/appdata/nodered</HostDir>
+      <HostDir>/mnt/user/docker/appdata/nodered</HostDir>
       <ContainerDir>/data</ContainerDir>
       <Mode>rw</Mode>
     </Volume>

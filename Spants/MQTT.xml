@@ -53,14 +53,10 @@
       <Name>PUID</Name>
       <Value>99</Value>
     </Variable>
-    <Variable>
-      <Name>EDGE</Name>
-      <Value>0</Value>
-    </Variable>
   </Environment>
   <Data>
     <Volume>
-      <HostDir>/mnt/disk9/docker/appdata/mqtt</HostDir>
+      <HostDir>/mnt/user/docker/appdata/mqtt</HostDir>
       <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
