@@ -13,6 +13,11 @@
     healthcare providers, and in a range of home automation and small device scenarios. [br]
     It is also ideal for mobile applications because of its small size, low power usage, [br]
     minimised data packets, and efficient distribution of information to one or many receivers[br]
+    [br][br][br]
+    This version supports passwords - see passwords.README in the /config directory.[br]
+    Also supported are websockets and certificates.[br]
+    [br]
+    The docker is built on a LinuxServer.io template, but be assured that any bugs are mine!.[br]
   </Description>
   <Registry>https://registry.hub.docker.com/u/spants/mqtt/</Registry>
   <GitHub>https://github.com/spants/unraidtemplates</GitHub>
@@ -28,10 +33,32 @@
         <ContainerPort>1883</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
+      <Port>
+        <HostPort>9001</HostPort>
+        <ContainerPort>9001</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
     </Publish>
   </Networking>
+  Environment>
+    <Variable>
+      <Name>PGID</Name>
+      <Value>100</Value>
+    </Variable>
+    <Variable>
+      <Name>PUID</Name>
+      <Value>99</Value>
+    </Variable>
+    <Variable>
+      <Name>EDGE</Name>
+      <Value>0</Value>
+    </Variable>
+  </Environment>
   <Data>
     <Volume>
+      <HostDir>/mnt/disk9/docker/appdata/mqtt</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
     </Volume>
   </Data>
   <WebUI>http://mqtt.org/</WebUI>
