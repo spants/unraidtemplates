@@ -17,7 +17,8 @@
     Drag and Drop interface for re-arranging your widgets.[br][br]
     [b][span style='color: #E80000;']Directions:[/span][/b][br]
     [b]/config[/b] : Dashing stores it's configuration files here.[br]
-    A sample dashboard is installed - edit [b]start.sh[/b] to point to your own.
+    A sample dashboard is installed - edit [b]start.sh[/b] to point to your own.[br][br]
+    *** It takes a couple of minutes to start the first time as it downloads additional files ***[br][br]
   </Description>
   <Registry>https://registry.hub.docker.com/u/spants/dashing/</Registry>
   <GitHub>https://github.com/spants/unraidtemplates</GitHub>
