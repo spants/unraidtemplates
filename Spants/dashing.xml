@@ -14,7 +14,7 @@
     Use premade widgets, or fully create your own with scss, html, and coffeescript.[br]
     Widgets harness the power of data bindings to keep things DRY and simple. Powered by batman.js.[br]
     Use the API to push data to your dashboards, or make use of a simple ruby DSL for fetching data.[br]
-    Drag & Drop interface for re-arranging your widgets.[br][br]
+    Drag and Drop interface for re-arranging your widgets.[br][br]
     [b][span style='color: #E80000;']Directions:[/span][/b][br]
     [b]/config[/b] : Dashing stores it's configuration files here.[br]
     A sample dashboard is installed - edit [b]start.sh[/b] to point to your own.
