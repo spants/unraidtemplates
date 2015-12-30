@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Beta>False</Beta>
+<Category>Network:Other Other:</Category>
+<Date>2015-12-30</Date>
+  <Changes>
+  [center][font size=4]unRaid-hole Change Log[/font][/center]
+  [b]30.DEC.2015:[/b]First Version![br][br]
+  </Changes>
+  <Support>http://lime-technology.com/forum/index.php?topic=38486.0</Support>
+  <Name>unRaid-Hole</Name>
+  <Description>
+    Inspired by Pi-Hole - lets block those pesky ads![br][br]
+    This is a fork of https://github.com/arthurkay/sagittarius-A[br][br]
+    which will become tuned to the unRaid template system[br][br]
+    Just set your DNS on your PC/Mac/Mobile to point to your unRaid servers IP[br]
+    and unRaid-hole will forward valid requests to (currently) googles DNS servers.[br]
+    Point your Routers DNS server address to unRaid to cover your whole network.[br][br]]
+    [b][span style='color: #E80000;']Directions:[/span][/b][br]
+    [b]No setup required![/b] : At the moment, no config required.[br]
+    Future options to include setting external DNS instead of Google[br]
+    and to define additional blacklists.[br][br]
+  </Description>
+  <Registry>https://registry.hub.docker.com/u/spants/unraid-hole/</Registry>
+  <GitHub>https://github.com/spants/unraidtemplates</GitHub>
+  <Repository>spants/unraid-hole</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>53</HostPort>
+        <ContainerPort>53</ContainerPort>
+        <Protocol>tcp</Protocol>
+        <HostPort>53</HostPort>
+        <ContainerPort>53</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>--cap-add=NET_ADMIN</Name>
+      <Value>100</Value>
+    </Variable>
+  </Environment>
+  <Data>
+  </Data>
+  <WebUI></WebUI>
+  <ExtraParams>--cap-add=NET_ADMIN</ExtraParams>
+  <Banner>http://i.imgur.com/V2C9Z9K.png</Banner>
+  <Icon>http://i.imgur.com/V2C9Z9K.png</Icon>
+</Container>
