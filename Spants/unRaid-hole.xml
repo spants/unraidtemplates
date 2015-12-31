@@ -2,10 +2,10 @@
 <Container>
   <Beta>False</Beta>
 <Category>Network:Other Other:</Category>
-<Date>2015-12-30</Date>
+<Date>2015-12-31</Date>
   <Changes>
   [center][font size=4]unRaid-hole Change Log[/font][/center]
-  [b]30.DEC.2015:[/b]First Version![br][br]
+  [b]31.DEC.2015:[/b]Using HOST mode for faster performance[br][br]
   </Changes>
   <Support>http://lime-technology.com/forum/index.php?topic=38486.0</Support>
   <Name>unRaid-Hole</Name>
@@ -24,28 +24,10 @@
   <Registry>https://registry.hub.docker.com/u/spants/unraid-hole/</Registry>
   <GitHub>https://github.com/spants/unraidtemplates</GitHub>
   <Repository>spants/unraid-hole</Repository>
-  <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Networking>
-    <Mode>bridge</Mode>
-    <Publish>
-      <Port>
-        <HostPort>53</HostPort>
-        <ContainerPort>53</ContainerPort>
-        <Protocol>TCP</Protocol>
-      </Port>
-      <Port>
-        <HostPort>53</HostPort>
-        <ContainerPort>53</ContainerPort>
-        <Protocol>udp</Protocol>
-      </Port>
-    </Publish>
+    <Mode>host</Mode>
   </Networking>
-  <Environment>
-  </Environment>
-  <Data>
-  </Data>
-  <WebUI></WebUI>
   <ExtraParams>--cap-add=NET_ADMIN</ExtraParams>
   <Banner>http://i.imgur.com/V2C9Z9K.png</Banner>
   <Icon>http://i.imgur.com/V2C9Z9K.png</Icon>
