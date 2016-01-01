@@ -10,12 +10,12 @@
   <Support>http://lime-technology.com/forum/index.php?topic=38486.0</Support>
   <Name>unRaid-Hole</Name>
   <Description>
-    Inspired by Pi-Hole - lets block those pesky ads![br][br]
+    Inspired by Pi-Hole - let's block those pesky ads![br][br]
     This is a fork of https://github.com/arthurkay/sagittarius-A[br][br]
-    which will become tuned to the unRaid template system[br][br]
-    Just set your DNS on your PC/Mac/Mobile to point to your unRaid servers IP[br]
-    and unRaid-hole will forward valid requests to (currently) googles DNS servers.[br]
-    Point your Routers DNS server address to unRaid to cover your whole network.[br][br]]
+    which will become tuned to the unRaid template system.[br][br]
+    Just set your DNS on your PC/Mac/Mobile to point to your unRaid servers IP
+     and unRaid-hole will forward valid requests to (currently) the Google DNS servers.[br]
+    Point your Routers DNS server address to unRaid to cover your whole network!.[br][br]
     [b][span style='color: #E80000;']Directions:[/span][/b][br]
     [b]No setup required![/b] : At the moment, no config required.[br]
     Future options to include setting external DNS instead of Google[br]
