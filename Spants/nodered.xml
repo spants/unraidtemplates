@@ -2,10 +2,10 @@
 <Container>
 <Beta>False</Beta>
 <Category>HomeAutomation:</Category>
-<Date>2016-03-13</Date>
+<Date>2016-03-21</Date>
 <Changes>
 [center][font size=4]NodeRed Change Log[/font][/center]
-[b]13.MAR.2016:[/b]Added experimental Hive control[br]
+[b]21.MAR.2016:[/b]Updated NodeRed to 0.13.4[br]
 Removed IBM IOT node and added Watson IOT</Changes>
 <Support>http://lime-technology.com/forum/index.php?topic=38486.0</Support>
 <Name>NodeRed</Name>
