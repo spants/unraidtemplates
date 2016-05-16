@@ -12,7 +12,7 @@
   <Support>http://lime-technology.com/forum/index.php?topic=38486.0</Support>
   <Name>MQTT</Name>
   <Description>
-    MQTT for Unraid6 Docker Manager running on Port 1883 and 9001[br][br]
+    MQTT for Unraid6 Docker Manager running on Port 1883 and 9883[br][br]
     MQTT is a machine-to-machine (M2M)/"Internet of Things" connectivity protocol. [br]
     It was designed as an extremely lightweight publish/subscribe messaging transport. [br]
     It is useful for connections with remote locations where a small code footprint is required [br]
