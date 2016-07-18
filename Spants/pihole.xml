@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Beta>True</Beta>
+<Category>Network:Other Other:</Category>
+<Date>2016-07-18</Date>
+  <Changes>
+  [center][font size=4]pihole Change Log[/font][/center]
+  [b]18.JUL.2016:[/b]First Version[br][br]
+  </Changes>
+  <Support>http://lime-technology.com/forum/index.php?topic=38486.0</Support>
+  <Name>pihole for unRaid</Name>
+  <Description>
+    Inspired by Pi-Hole - let's block those pesky ads![br][br]
+    This is a fork of diginc/docker-pi-hole who did all the hard work[br][br]
+    which I then tuned to the unRaid template system and removed the IPV6 reference.[br][br]
+    Just set your DNS on your PC/Mac/Mobile to point to your unRaid servers IP[br]
+    and pihole will forward valid requests to your defined DNS servers.[br]
+    Point your Routers DNS server address to unRaid to cover your whole network!.[br][br]
+    [b][span style='color: #E80000;']Directions:[/span][/b][br]
+    [b]Setup IS required![/b] : Please see the environment variables.[br]
+    Allows the use of Whitelists and Blacklists.[br]
+    Web based admin on serverip/admin *** Make sure that you change unRaid's[br] 
+    default port as this uses port 80[br][br]
+  </Description>
+  <Registry>https://registry.hub.docker.com/u/spants/pihole/</Registry>
+  <GitHub>https://github.com/spants/unraidtemplates</GitHub>
+  <Repository>spants/pihole</Repository>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>53</HostPort>
+        <ContainerPort>53</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>53</HostPort>
+        <ContainerPort>53</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>80</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Value>192.168.1.22</Value>
+      <Name>ServerIP</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>8.8.8.8</Value>
+      <Name>DNS1</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>8.8.4.4</Value>
+      <Name>DNS2</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/dockerfiles/appdata/pihole/pihole.log</HostDir>
+      <ContainerDir>/var/log/pihole.log</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/cache/dockerfiles/appdata/pihole/blacklist.txt</HostDir>
+      <ContainerDir>/etc/pihole/blacklist.txt</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/cache/dockerfiles/appdata/pihole/whitelist.txt</HostDir>
+      <ContainerDir>/etc/pihole/whitelist.txt</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>    
+  </Data>
+  <ExtraParams>--cap-add=NET_ADMIN</ExtraParams>
+  <Banner>http://i.imgur.com/V2C9Z9K.png</Banner>
+  <Icon>http://i.imgur.com/V2C9Z9K.png</Icon>
+</Container>
