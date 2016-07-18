@@ -65,18 +65,13 @@
   </Environment>
   <Data>
     <Volume>
-      <HostDir>/mnt/cache/dockerfiles/appdata/pihole/pihole.log</HostDir>
-      <ContainerDir>/var/log/pihole.log</ContainerDir>
+      <HostDir>/mnt/cache/dockerfiles/appdata/pihole/log</HostDir>
+      <ContainerDir>/var/log</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/cache/dockerfiles/appdata/pihole/blacklist.txt</HostDir>
-      <ContainerDir>/etc/pihole/blacklist.txt</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <HostDir>/mnt/cache/dockerfiles/appdata/pihole/whitelist.txt</HostDir>
-      <ContainerDir>/etc/pihole/whitelist.txt</ContainerDir>
+      <HostDir>/mnt/cache/dockerfiles/appdata/pihole</HostDir>
+      <ContainerDir>/etc/pihole/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>    
   </Data>
