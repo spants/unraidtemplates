@@ -7,10 +7,14 @@
   [center][font size=4]pihole Change Log[/font][/center]
   [b]18.JUL.2016:[/b]First Version[br][br]
   </Changes>
-  <Support>http://lime-technology.com/forum/index.php?topic=38486.0</Support>
+  <Support>https://lime-technology.com/forum/index.php?topic=50453.0</Support>
   <Name>pihole-for-unRaid</Name>
   <Description>
     Inspired by Pi-Hole - let's block those pesky ads![br][br]
+    ** Note that you will need to creat 3 empty files in the data directory:[br]
+    blacklist.txt[br]whitelist.txt[br]pihole.log[br][br]
+    IF YOU DO NOT DO THIS, IT WILL NOT START!!!![br][br]
+    Also, please install the cron tasks to delete logs - see forum.[br]
     This is a fork of diginc/docker-pi-hole who did all the hard work[br][br]
     which I then tuned to the unRaid template system and removed the IPV6 reference.[br][br]
     Just set your DNS on your PC/Mac/Mobile to point to your unRaid servers IP[br]
