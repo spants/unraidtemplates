@@ -81,6 +81,7 @@
     </Volume>    
   </Data>
   <ExtraParams>--cap-add=NET_ADMIN</ExtraParams>
+  <WebUI>http://[IP]/admin</WebUI>
   <Banner>http://i.imgur.com/V2C9Z9K.png</Banner>
   <Icon>http://i.imgur.com/V2C9Z9K.png</Icon>
 </Container>
