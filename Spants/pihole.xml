@@ -2,10 +2,10 @@
 <Container>
   <Beta>True</Beta>
 <Category>Network:Other Other:</Category>
-<Date>2016-07-18</Date>
+<Date>2016-08-21</Date>
   <Changes>
   [center][font size=4]pihole Change Log[/font][/center]
-  [b]18.JUL.2016:[/b]First Version[br][br]
+  [b]21.AUG.2016:[/b]Using Debian (testing)[br][br]
   </Changes>
   <Support>https://lime-technology.com/forum/index.php?topic=50453.0</Support>
   <Name>pihole-for-unRaid</Name>
@@ -69,17 +69,17 @@
   </Environment>
   <Data>
     <Volume>
-      <HostDir>/mnt/cache/dockerfiles/appdata/pihole/pihole.log</HostDir>
+      <HostDir>/mnt/user/appdata/pihole/pihole.log</HostDir>
       <ContainerDir>/var/log/pihole.log</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/cache/dockerfiles/appdata/pihole/blacklist.txt</HostDir>
+      <HostDir>/mnt/user/appdata/pihole/blacklist.txt</HostDir>
       <ContainerDir>/etc/pihole/blacklist.txt</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/cache/dockerfiles/appdata/pihole/whitelist.txt</HostDir>
+      <HostDir>/mnt/user/appdata/pihole/whitelist.txt</HostDir>
       <ContainerDir>/etc/pihole/whitelist.txt</ContainerDir>
       <Mode>rw</Mode>
     </Volume>    
