@@ -20,7 +20,7 @@ This is the Docker from the Node Red team - alternative to my custom one.[br][br
 </Description>
 <Registry>https://hub.docker.com/r/nodered/node-red-docker/</Registry>
 <GitHub>https://github.com/node-red/node-red-docker</GitHub>
-<Repository>spants/officialNodeRed</Repository>
+<Repository>nodered/node-red-docker</Repository>
 <BindTime>true</BindTime>
 <Privileged>false</Privileged>
 <Networking>
