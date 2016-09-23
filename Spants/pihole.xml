@@ -5,7 +5,8 @@
 <Date>2016-08-21</Date>
   <Changes>
   [center][font size=4]pihole Change Log[/font][/center]
-  [b]21.AUG.2016:[/b]Alpine[br][br]
+  [b]23.SEP.2016:[/b]Alpine[br][br]
+  [b]Changed to use the offical docker, this is just the template[/b]
   </Changes>
   <Support>https://lime-technology.com/forum/index.php?topic=50453.0</Support>
   <Name>pihole-for-unRaid</Name>
@@ -26,9 +27,9 @@
     Web based admin on serverip/admin *** Make sure that you change unRaid's[br] 
     default port as this uses port 80[br][br]
   </Description>
-  <Registry>https://registry.hub.docker.com/u/spants/pihole/</Registry>
+  <Registry>https://registry.hub.docker.com/r/diginc/pi-hole</Registry>
   <GitHub>https://github.com/spants/unraidtemplates</GitHub>
-  <Repository>spants/pihole</Repository>
+  <Repository>diginc/pi-hole:alpine</Repository>
   <Privileged>false</Privileged>
   <Networking>
     <Mode>bridge</Mode>
@@ -64,6 +65,11 @@
     <Variable>
       <Value>8.8.4.4</Value>
       <Name>DNS2</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>False</Value>
+      <Name>IPv6</Name>
       <Mode/>
     </Variable>
   </Environment>
