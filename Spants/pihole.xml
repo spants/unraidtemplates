@@ -9,7 +9,7 @@
   [b]Changed to use the offical docker, this is just the template[/b]
   </Changes>
   <Support>https://lime-technology.com/forum/index.php?topic=50453.0</Support>
-  <Name>pihole-for-unRaid</Name>
+  <Name>pihole</Name>
   <Description>
     Inspired by Pi-Hole - let's block those pesky ads![br][br]
     ** Note that you will need to creat 3 empty files in the data directory:[br]
