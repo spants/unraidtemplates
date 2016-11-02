@@ -40,11 +40,6 @@
         <Protocol>tcp</Protocol>
       </Port>
       <Port>
-        <HostPort>53</HostPort>
-        <ContainerPort>53</ContainerPort>
-        <Protocol>udp</Protocol>
-      </Port>
-      <Port>
         <HostPort>80</HostPort>
         <ContainerPort>80</ContainerPort>
         <Protocol>tcp</Protocol>
