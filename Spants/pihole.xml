@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container>
-  <Beta>True</Beta>
+  <Beta>False</Beta>
 <Category>Network:Other Other:</Category>
-<Date>2016-08-21</Date>
+<Date>2016-11-01</Date>
   <Changes>
   [center][font size=4]pihole Change Log[/font][/center]
-  [b]23.SEP.2016:[/b]Alpine[br][br]
+  [b]NOV.2016:[/b]Removed Beta flag[br][br]
   [b]Changed to use the offical docker, this is just the template[/b]
   </Changes>
   <Support>https://lime-technology.com/forum/index.php?topic=50453.0</Support>
@@ -24,7 +24,7 @@
     [b][span style='color: #E80000;']Directions:[/span][/b][br]
     [b]Setup IS required![/b] : Please see the environment variables.[br]
     Allows the use of Whitelists and Blacklists.[br]
-    Web based admin on serverip/admin *** Make sure that you change unRaid's[br] 
+    Web based admin on serverip/admin *** Make sure that you change unRaid's[br]
     default port as this uses port 80[br][br]
   </Description>
   <Registry>https://registry.hub.docker.com/r/diginc/pi-hole</Registry>
@@ -88,7 +88,7 @@
       <HostDir>/mnt/user/appdata/pihole/whitelist.txt</HostDir>
       <ContainerDir>/etc/pihole/whitelist.txt</ContainerDir>
       <Mode>rw</Mode>
-    </Volume>    
+    </Volume>
   </Data>
   <ExtraParams>--cap-add=NET_ADMIN</ExtraParams>
   <WebUI>http://[IP]:[PORT:80]/admin</WebUI>
