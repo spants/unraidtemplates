@@ -15,7 +15,7 @@
 </Description>
 <Registry>https://hub.docker.com/r/kerberos/machinery/</Registry>
 <GitHub>https://github.com/kerberos-io/machinery</GitHub>
-<Repository>/machinery</Repository>
+<Repository>kerberos/machinery</Repository>
 <BindTime>true</BindTime>
 <Privileged>false</Privileged>
 <Networking>
