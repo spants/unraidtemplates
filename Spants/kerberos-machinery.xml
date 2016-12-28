@@ -14,7 +14,7 @@ Kerberos.io is a free video surveillance solution.[br][br]
 Machinery is the processing core, a separate Docker Web is used for the viusalisation.[br]
 </Description>
 <Registry>https://hub.docker.com/r/kerberos/machinery/</Registry>
-<GitHub></GitHub>
+<GitHub>https://github.com/kerberos-io/machinery</GitHub>
 <Repository>/machinery</Repository>
 <BindTime>true</BindTime>
 <Privileged>false</Privileged>
