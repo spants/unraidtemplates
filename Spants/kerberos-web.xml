@@ -28,7 +28,7 @@
     </Port>
     <Port>
       <HostPort>7443</HostPort>
-      <ContainerPort>7443</ContainerPort>
+      <ContainerPort>443</ContainerPort>
       <Protocol>tcp</Protocol>
     </Port>
   </Publish>
