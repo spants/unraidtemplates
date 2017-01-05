@@ -41,7 +41,7 @@
 <Data>
   <Volume>
     <HostDir>/mnt/user/appdata/couchdb</HostDir>
-    <ContainerDir>/usr/local/var/lib/couchdb</ContainerDir>
+    <ContainerDir>/opt/couchdb/data</ContainerDir>
     <Mode>rw</Mode>
   </Volume>
 </Data>
