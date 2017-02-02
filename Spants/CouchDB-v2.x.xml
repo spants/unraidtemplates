@@ -2,10 +2,10 @@
 <Container>
 <Beta>False</Beta>
 <Category>Productivity:</Category>
-<Date>2017-01-05</Date>
+<Date>2017-02-02</Date>
 <Changes>
   [center][font size=4]CouchDB v2.x[/font][/center]
-  [b]05.JAN.2017:[/b]First template[br]
+  [b]02.FEB.2017:[/b]changed data directory location to add config directory[br]
 </Changes>
 <Support>https://lime-technology.com/forum/index.php?topic=38486.0</Support>
 <Name>CouchDB v2.x</Name>
@@ -26,22 +26,17 @@
       <ContainerPort>5984</ContainerPort>
       <Protocol>tcp</Protocol>
     </Port>
-    <Port>
-      <HostPort>4369</HostPort>
-      <ContainerPort>4369</ContainerPort>
-      <Protocol>tcp</Protocol>
-    </Port>
-    <Port>
-      <HostPort>9100</HostPort>
-      <ContainerPort>9100</ContainerPort>
-      <Protocol>tcp</Protocol>
-    </Port>
   </Publish>
 </Networking>
 <Data>
   <Volume>
-    <HostDir>/mnt/user/appdata/couchdb</HostDir>
+    <HostDir>/mnt/user/appdata/couchdb/data</HostDir>
     <ContainerDir>/opt/couchdb/data</ContainerDir>
+    <Mode>rw</Mode>
+  </Volume>
+  <Volume>
+    <HostDir>/mnt/user/appdata/couchdb/config</HostDir>
+    <ContainerDir>/opt/couchdb/etc</ContainerDir>
     <Mode>rw</Mode>
   </Volume>
 </Data>
