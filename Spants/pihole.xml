@@ -2,20 +2,20 @@
 <Container>
   <Beta>False</Beta>
 <Category>Network:Other Other:</Category>
-<Date>2016-11-01</Date>
+<Date>2017-11-05</Date>
   <Changes>
   [center][font size=4]pihole Change Log[/font][/center]
-  [b]NOV.2016:[/b]Removed Beta flag[br][br]
+  [b]NOV.2017:[/b]Changed Template to work smoothly[br][br]
   [b]Changed to use the offical docker, this is just the template[/b]
   </Changes>
   <Support>https://lime-technology.com/forum/index.php?topic=50453.0</Support>
   <Name>pihole</Name>
   <Description>
     Inspired by Pi-Hole - let's block those pesky ads![br][br]
-    ** Note that you will need to create 3 empty files in the data directory:[br]
-    blacklist.txt [br]whitelist.txt [br]pihole.log [br][br]
-    IF YOU DO NOT DO THIS, IT WILL NOT START!!!![br][br]
-    Also, please install the cron tasks to delete logs - see forum.[br]
+    This Version 2 of the template is now self contained[br]
+    [br]Please note that the directories have changed[br]
+    so that you will need to add your previous WHitelist and Blacklists.[br]
+    Cron jobs are run by using your TimeZone - see TZ variable[br]
     This is a fork of diginc/docker-pi-hole who did all the hard work[br][br]
     which I then tuned to the unRaid template system and removed the IPV6 reference.[br][br]
     Just set your DNS on your PC/Mac/Mobile to point to your unRaid servers IP[br]
@@ -25,7 +25,7 @@
     [b]Setup IS required![/b] : Please see the environment variables.[br]
     Allows the use of Whitelists and Blacklists.[br]
     Web based admin on serverip/admin *** Make sure that you change unRaid's[br]
-    default port as this uses port 80[br][br]
+    default port as this uses port 80 or use Unraid 6.4 to set this to its own IP address[br][br]
   </Description>
   <Registry>https://registry.hub.docker.com/r/diginc/pi-hole</Registry>
   <GitHub>https://github.com/spants/unraidtemplates</GitHub>
@@ -38,16 +38,19 @@
         <HostPort>53</HostPort>
         <ContainerPort>53</ContainerPort>
         <Protocol>tcp</Protocol>
+        <Name>TCP Port</Name>
       </Port>
       <Port>
         <HostPort>53</HostPort>
         <ContainerPort>53</ContainerPort>
         <Protocol>udp</Protocol>
+        <Name>UDP Port</Name>
       </Port>
       <Port>
         <HostPort>80</HostPort>
         <ContainerPort>80</ContainerPort>
         <Protocol>tcp</Protocol>
+        <Name>Http Port (should be 80!)</Name>
       </Port>
     </Publish>
   </Networking>
@@ -72,21 +75,36 @@
       <Name>IPv6</Name>
       <Mode/>
     </Variable>
+    <Variable>
+      <Value>Europe/London</Value>
+      <Name>TZ</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>admin</Value>
+      <Name>WEBPASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>br0</Value>
+      <Name>INTERFACE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>all</Value>
+      <Name>DNSMASQ_LISTENING</Name>
+      <Mode/>
+    </Variable>
   </Environment>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/pihole/pihole.log</HostDir>
-      <ContainerDir>/var/log/pihole.log</ContainerDir>
+      <HostDir>/mnt/user/appdata/pihole/pihole/</HostDir>
+      <ContainerDir>/etc/pihole/</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/appdata/pihole/blacklist.txt</HostDir>
-      <ContainerDir>/etc/pihole/blacklist.txt</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <HostDir>/mnt/user/appdata/pihole/whitelist.txt</HostDir>
-      <ContainerDir>/etc/pihole/whitelist.txt</ContainerDir>
+      <HostDir>/mnt/user/appdata/pihole/dnsmasq.d/</HostDir>
+      <ContainerDir>/etc/dnsmasq.d/</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
