@@ -57,7 +57,7 @@
   <Environment>
     <Variable>
       <Value>192.168.1.22</Value>
-      <Name>PiHole IP</Name>
+      <Name>ServerIP</Name>
       <Mode/>
     </Variable>
     <Variable>
