@@ -110,6 +110,6 @@
   </Data>
   <ExtraParams>--cap-add=NET_ADMIN</ExtraParams>
   <WebUI>http://[IP]:[PORT:80]/admin</WebUI>
-  <Banner>https://imgur.com/OWkNcEn</Banner>
-  <Icon>https://imgur.com/OWkNcEn</Icon>
+  <Banner>https://i.imgur.com/OWkNcEn.png</Banner>
+  <Icon>https://i.imgur.com/OWkNcEn.png</Icon>
 </Container>
