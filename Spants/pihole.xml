@@ -2,10 +2,10 @@
 <Container>
   <Beta>False</Beta>
 <Category>Network:Other Other:</Category>
-<Date>2018-01-04</Date>
+<Date>2018-02-16</Date>
   <Changes>
   [center][font size=4]pihole Change Log[/font][/center]
-  [b]Jan.2018:[/b]Changed Template to work with Debian base as Apline is depreciated.[br][br]
+  [b]Feb.2018:[/b]Changed Template to work with Debian base as Apline is depreciated.[br][br]
   [b]Changed to use the offical docker, this is just the template[/b]
   </Changes>
   <Support>https://lime-technology.com/forum/index.php?topic=50453.0</Support>
@@ -29,7 +29,7 @@
   </Description>
   <Registry>https://registry.hub.docker.com/r/diginc/pi-hole</Registry>
   <GitHub>https://github.com/spants/unraidtemplates</GitHub>
-  <Repository>diginc/pi-hole:debian</Repository>
+  <Repository>diginc/pi-hole:latest</Repository>
   <Privileged>false</Privileged>
   <Networking>
     <Mode>bridge</Mode>
@@ -57,7 +57,7 @@
   <Environment>
     <Variable>
       <Value>192.168.1.22</Value>
-      <Name>ServerIP</Name>
+      <Name>PiHole IP</Name>
       <Mode/>
     </Variable>
     <Variable>
@@ -110,6 +110,6 @@
   </Data>
   <ExtraParams>--cap-add=NET_ADMIN</ExtraParams>
   <WebUI>http://[IP]:[PORT:80]/admin</WebUI>
-  <Banner>http://i.imgur.com/V2C9Z9K.png</Banner>
-  <Icon>http://i.imgur.com/V2C9Z9K.png</Icon>
+  <Banner>https://i0.wp.com/pi-hole.net/wp-content/uploads/2017/06/Vortex-r.png?resize=300%2C300&ssl=1</Banner>
+  <Icon>https://i0.wp.com/pi-hole.net/wp-content/uploads/2017/06/Vortex-r.png?resize=300%2C300&ssl=1</Icon>
 </Container>
