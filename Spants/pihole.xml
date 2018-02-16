@@ -61,6 +61,11 @@
       <Mode/>
     </Variable>
     <Variable>
+      <Value></Value>
+      <Name>ServerIPv6</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
       <Value>8.8.8.8</Value>
       <Name>DNS1</Name>
       <Mode/>
