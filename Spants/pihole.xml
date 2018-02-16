@@ -110,6 +110,6 @@
   </Data>
   <ExtraParams>--cap-add=NET_ADMIN</ExtraParams>
   <WebUI>http://[IP]:[PORT:80]/admin</WebUI>
-  <Banner>https://i0.wp.com/pi-hole.net/wp-content/uploads/2017/06/Vortex-r.png?resize=300%2C300&ssl=1</Banner>
-  <Icon>https://i0.wp.com/pi-hole.net/wp-content/uploads/2017/06/Vortex-r.png?resize=300%2C300&ssl=1</Icon>
+  <Banner>https://imgur.com/OWkNcEn</Banner>
+  <Icon>https://imgur.com/OWkNcEn</Icon>
 </Container>
