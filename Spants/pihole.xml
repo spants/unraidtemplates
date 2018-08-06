@@ -5,8 +5,8 @@
 <Date>2018-02-16</Date>
   <Changes>
   [center][font size=4]pihole Change Log[/font][/center]
-  [b]Feb.2018:[/b]Changed Template to work with Debian base as Apline is depreciated.[br][br]
-  [b]Changed to use the offical docker, this is just the template[/b]
+  [b]AUG.2018:[/b]Changed Template to work with official PiHole docker.[br][br]
+  [b]Diginc has now been rolled into PiHole. This is just the template for that Docker[/b]
   </Changes>
   <Support>https://lime-technology.com/forum/index.php?topic=50453.0</Support>
   <Name>pihole</Name>
@@ -29,7 +29,7 @@
   </Description>
   <Registry>https://registry.hub.docker.com/r/diginc/pi-hole</Registry>
   <GitHub>https://github.com/spants/unraidtemplates</GitHub>
-  <Repository>diginc/pi-hole:latest</Repository>
+  <Repository>pihole/pihole:latest</Repository>
   <Privileged>false</Privileged>
   <Networking>
     <Mode>bridge</Mode>
