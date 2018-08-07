@@ -2,7 +2,7 @@
 <Container>
   <Beta>False</Beta>
 <Category>Network:Other Other:</Category>
-<Date>2018-02-16</Date>
+<Date>2018-08-06</Date>
   <Changes>
   [center][font size=4]pihole Change Log[/font][/center]
   [b]AUG.2018:[/b]Changed Template to work with official PiHole docker.[br][br]
