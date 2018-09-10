@@ -2,11 +2,10 @@
 <Container>
   <Beta>False</Beta>
 <Category>Network:Other Other:</Category>
-<Date>2018-08-06</Date>
+<Date>2018-09-10</Date>
   <Changes>
   [center][font size=4]pihole Change Log[/font][/center]
-  [b]AUG.2018:[/b]Changed Template to work with official PiHole docker.[br][br]
-  [b]Diginc has now been rolled into PiHole. This is just the template for that Docker[/b]
+  [b]SEP.2018:[/b]Added Variables as suggested by semtex41[br][br]
   </Changes>
   <Support>https://lime-technology.com/forum/index.php?topic=50453.0</Support>
   <Name>pihole</Name>
@@ -56,6 +55,14 @@
   </Networking>
   <Environment>
     <Variable>
+      <Name>PUID</Name>
+      <Value>99</Value>
+    </Variable>
+    <Variable>
+      <Name>PGID</Name>
+      <Value>100</Value>
+    </Variable>
+    <Variable>
       <Value>192.168.1.22</Value>
       <Name>ServerIP</Name>
       <Mode/>
@@ -91,7 +98,7 @@
       <Mode/>
     </Variable>
     <Variable>
-      <Value>br0</Value>
+      <Value>eth0</Value>
       <Name>INTERFACE</Name>
       <Mode/>
     </Variable>
