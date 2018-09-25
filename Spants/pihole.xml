@@ -65,47 +65,38 @@
     <Variable>
       <Value>192.168.1.22</Value>
       <Name>ServerIP</Name>
-      <Mode/>
     </Variable>
     <Variable>
       <Value></Value>
       <Name>ServerIPv6</Name>
-      <Mode/>
     </Variable>
     <Variable>
       <Value>8.8.8.8</Value>
       <Name>DNS1</Name>
-      <Mode/>
     </Variable>
     <Variable>
       <Value>8.8.4.4</Value>
       <Name>DNS2</Name>
-      <Mode/>
     </Variable>
     <Variable>
       <Value>False</Value>
       <Name>IPv6</Name>
-      <Mode/>
     </Variable>
     <Variable>
       <Value>Europe/London</Value>
       <Name>TZ</Name>
-      <Mode/>
     </Variable>
     <Variable>
       <Value>admin</Value>
       <Name>WEBPASSWORD</Name>
-      <Mode/>
     </Variable>
     <Variable>
       <Value>eth0</Value>
       <Name>INTERFACE</Name>
-      <Mode/>
     </Variable>
     <Variable>
       <Value>all</Value>
       <Name>DNSMASQ_LISTENING</Name>
-      <Mode/>
     </Variable>
   </Environment>
   <Data>
