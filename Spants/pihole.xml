@@ -111,7 +111,7 @@
       <Mode>rw</Mode>
     </Volume>
   </Data>
-  <ExtraParams>--cap-add=NET_ADMIN</ExtraParams>
+  <ExtraParams>--cap-add=NET_ADMIN --dns 127.0.0.1 --dns 1.1.1.1 --restart=unless-stopped</ExtraParams>
   <WebUI>http://[IP]:[PORT:80]/admin</WebUI>
   <Banner>https://i.imgur.com/OWkNcEn.png</Banner>
   <Icon>https://i.imgur.com/OWkNcEn.png</Icon>
