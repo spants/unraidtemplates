@@ -14,6 +14,8 @@
     This is a template for the official PiHole Docker[br]
     Make sure that you use bridge mode and give PiHole[br]
     it's own IP address.[br]
+    Also, if you set you router to give out the PiHole address to clients,[br]
+    make sure that you fixe the unRaid servers dns to point to a real DNS Server.[br]
   </Description>
   <Registry>https://hub.docker.com/r/pihole/pihole/</Registry>
   <GitHub>https://github.com/spants/unraidtemplates</GitHub>
