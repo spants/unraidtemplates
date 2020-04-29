@@ -16,13 +16,13 @@ This template was constructed with knowledge from https://www.reddit.com/r/unRAI
 Please see Tergi's post on doing camera passthrough: https://forums.unraid.net/topic/91533-unraid-683-pass-usb-webcam-into-docker/&#xD;
 </Overview>
   <Category>Tools:</Category>
-  <WebUI/>
+  <Date>2020-04-29</Date>
+  <WebUI>http://[IP]:[PORT:5000]</WebUI>
   <TemplateURL/>
   <Icon>https://octoprint.org/assets/img/logo.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1588161415</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description>A docker template for Octoprint by Spants. &#xD;
