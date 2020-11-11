@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>NodeRed - based on official docker</Name>
+  <Repository>nodered/node-red</Repository>
+  <Registry>https://hub.docker.com/r/nodered/node-red/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>http://lime-technology.com/forum/index.php?topic=38486.0</Support>
+  <Project/>
+  <Overview>&#xD;
+Node-RED is a visual tool for wiring the Internet of Things[br][br]&#xD;
+Node-RED is a tool for wiring together hardware devices, APIs and online services in new and interesting ways.[br][br]&#xD;
+See NodeRed.org and flows.nodered.org for more info. [br][br]&#xD;
+NodeRed will run on port 1880.[br][br]&#xD;
+This is the V1 release Docker from the Node Red team - I just created the template.[br][br]&#xD;
+[b][span style='color: #E80000;']Directions:[/span][/b][br]&#xD;
+[b]/data[/b] : in this path, Node Red will store it's configuration files.&#xD;
+[b]15.SEP.2016:[/b]First template[br]&#xD;
+</Overview>
+  <Category>HomeAutomation:</Category>
+  <WebUI>http://[IP]:[PORT:1880]</WebUI>
+  <TemplateURL/>
+  <Icon>http://i.imgur.com/zXpacAF.png</Icon>
+  <ExtraParams></ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1605108546</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>&#xD;
+Node-RED is a visual tool for wiring the Internet of Things[br][br]&#xD;
+Node-RED is a tool for wiring together hardware devices, APIs and online services in new and interesting ways.[br][br]&#xD;
+See NodeRed.org and flows.nodered.org for more info. [br][br]&#xD;
+NodeRed will run on port 1880.[br][br]&#xD;
+This is the V1 release Docker from the Node Red team - I just created the template.[br][br]&#xD;
+[b][span style='color: #E80000;']Directions:[/span][/b][br]&#xD;
+[b]/data[/b] : in this path, Node Red will store it's configuration files.&#xD;
+[b]15.SEP.2016:[/b]First template[br]&#xD;
+</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>1880</HostPort>
+        <ContainerPort>1880</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/nodered/</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>false</Value>
+      <Name>NODE_RED_ENABLE_SAFE_MODE</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Port" Target="1880" Default="1880" Mode="tcp" Description="Container Port: 1880" Type="Port" Display="always" Required="true" Mask="false">1880</Config>
+  <Config Name="Data Path" Target="/data" Default="/mnt/user/appdata/nodered" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/nodered/</Config>
+  <Config Name="Safe mode" Target="NODE_RED_ENABLE_SAFE_MODE" Default="false" Mode="" Description="Container Variable: NODE_RED_ENABLE_SAFE_MODE" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+</Container>
