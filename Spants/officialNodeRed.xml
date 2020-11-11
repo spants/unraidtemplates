@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>NodeRed - based on official docker</Name>
+  <Name>NodeRed</Name>
   <Repository>nodered/node-red</Repository>
   <Registry>https://hub.docker.com/r/nodered/node-red/</Registry>
   <Network>bridge</Network>
@@ -14,7 +14,7 @@ Node-RED is a visual tool for wiring the Internet of Things[br][br]&#xD;
 Node-RED is a tool for wiring together hardware devices, APIs and online services in new and interesting ways.[br][br]&#xD;
 See NodeRed.org and flows.nodered.org for more info. [br][br]&#xD;
 NodeRed will run on port 1880.[br][br]&#xD;
-This is the V1 release Docker from the Node Red team - I just created the template.[br][br]&#xD;
+This is the official Docker release from the NodeRed team - I just created the template.[br][br]&#xD;
 [b][span style='color: #E80000;']Directions:[/span][/b][br]&#xD;
 [b]/data[/b] : in this path, Node Red will store it's configuration files.&#xD;
 [b]15.SEP.2016:[/b]First template[br]&#xD;
