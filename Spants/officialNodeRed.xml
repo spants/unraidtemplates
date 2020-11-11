@@ -8,7 +8,7 @@
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support>http://lime-technology.com/forum/index.php?topic=38486.0</Support>
-  <Project/>
+  <Project>https://nodered.org</Project>
   <Overview>&#xD;
 Node-RED is a visual tool for wiring the Internet of Things[br][br]&#xD;
 Node-RED is a tool for wiring together hardware devices, APIs and online services in new and interesting ways.[br][br]&#xD;
