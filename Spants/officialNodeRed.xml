@@ -38,6 +38,7 @@ This is the V1 release Docker from the Node Red team - I just created the templa
 [b][span style='color: #E80000;']Directions:[/span][/b][br]&#xD;
 [b]/data[/b] : in this path, Node Red will store it's configuration files.&#xD;
 [b]15.SEP.2016:[/b]First template[br]&#xD;
+[b]11.NOV.2020:[/b]Added Safe mode, Corrected Docker Hub[br]&#xD;
 </Description>
   <Networking>
     <Mode>bridge</Mode>
