@@ -7,7 +7,7 @@
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://hub.docker.com/r/photostructure/server/</Support>
+  <Support>https://forums.unraid.net/topic/98866-support-spants-photostructure-template</Support>
   <Project>https://photostructure.com/</Project>
   <Overview>Template by Spants.&#xD;
 Beta access to PhotoStructure, your new home for all your photos and videos.   &#xD;
