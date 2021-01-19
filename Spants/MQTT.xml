@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>MQTT-open</Name>
+  <Name>MQTT</Name>
   <Repository>spants/mqtt</Repository>
   <Registry>https://registry.hub.docker.com/u/spants/mqtt/</Registry>
   <Network>bridge</Network>
@@ -10,7 +10,7 @@
   <Support>http://lime-technology.com/forum/index.php?topic=38486.0</Support>
   <Project/>
   <Overview>&#xD;
-    MQTT for Unraid6 Docker Manager running on Port 1883 and 9883[br][br]&#xD;
+    MQTT for Unraid6 Docker Manager running on Port 1883 and 9001[br][br]&#xD;
     MQTT is a machine-to-machine (M2M)/"Internet of Things" connectivity protocol. [br]&#xD;
     It was designed as an extremely lightweight publish/subscribe messaging transport. [br]&#xD;
     It is useful for connections with remote locations where a small code footprint is required [br]&#xD;
@@ -23,11 +23,7 @@
     This version supports passwords - see passwords.README in the /config directory.[br]&#xD;
     Also supported are websockets and certificates.[br]&#xD;
     [br]&#xD;
-    An example config file is stored in the data directory. If you have used an older Docker your config may need changing.[br]&#xD;
-    [br]&#xD;
-    Note that you may have to use NEWPERMS to edit the config files.[br]&#xD;
-    The permissions for unraid have been removed to allow this to be a multihost docker.[br][br][br]&#xD;
-    The docker is built on a Alpine Linux base.[br]&#xD;
+    The docker is built on a LinuxServer.io template, but be assured that any bugs are mine!.[br]&#xD;
   </Overview>
   <Category>HomeAutomation:</Category>
   <WebUI>http://mqtt.org/</WebUI>
@@ -36,11 +32,11 @@
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1611058650</DateInstalled>
+  <DateInstalled>1611059646</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description>&#xD;
-    MQTT for Unraid6 Docker Manager running on Port 1883 and 9883[br][br]&#xD;
+    MQTT for Unraid6 Docker Manager running on Port 1883 and 9001[br][br]&#xD;
     MQTT is a machine-to-machine (M2M)/"Internet of Things" connectivity protocol. [br]&#xD;
     It was designed as an extremely lightweight publish/subscribe messaging transport. [br]&#xD;
     It is useful for connections with remote locations where a small code footprint is required [br]&#xD;
@@ -53,11 +49,7 @@
     This version supports passwords - see passwords.README in the /config directory.[br]&#xD;
     Also supported are websockets and certificates.[br]&#xD;
     [br]&#xD;
-    An example config file is stored in the data directory. If you have used an older Docker your config may need changing.[br]&#xD;
-    [br]&#xD;
-    Note that you may have to use NEWPERMS to edit the config files.[br]&#xD;
-    The permissions for unraid have been removed to allow this to be a multihost docker.[br][br][br]&#xD;
-    The docker is built on a Alpine Linux base.[br]&#xD;
+    The docker is built on a LinuxServer.io template, but be assured that any bugs are mine!.[br]&#xD;
   </Description>
   <Networking>
     <Mode>bridge</Mode>
@@ -81,22 +73,9 @@
       <Mode>rw</Mode>
     </Volume>
   </Data>
-  <Environment>
-    <Variable>
-      <Value>99</Value>
-      <Name>PUID</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>100</Value>
-      <Name>PGID</Name>
-      <Mode/>
-    </Variable>
-  </Environment>
+  <Environment/>
   <Labels/>
-  <Config Name="Host Port 1" Target="1883" Default="1883" Mode="tcp" Description="Container Port: 1883" Type="Port" Display="always" Required="true" Mask="false">1884</Config>
-  <Config Name="Host Port 2" Target="9001" Default="9001" Mode="tcp" Description="Container Port: 9001" Type="Port" Display="always" Required="true" Mask="false">9004</Config>
-  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
-  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
-  <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/MQTT" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/MQTT-open</Config>
+  <Config Name="Port 1" Target="1883" Default="1883" Mode="tcp" Description="Container Port: 1883" Type="Port" Display="always" Required="true" Mask="false">1883</Config>
+  <Config Name="Port 2" Target="9001" Default="9001" Mode="tcp" Description="Container Port: 9001" Type="Port" Display="always" Required="true" Mask="false">9001</Config>
+  <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/docker/appdata/MQTT" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/MQTT</Config>
 </Container>
