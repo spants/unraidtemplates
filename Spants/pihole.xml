@@ -5,7 +5,7 @@
 <Date>2020-12-31</Date>
   <Changes>
   [center][font size=4]pihole Change Log[/font][/center]
-  [b]DEC.2020:[/b]Updated appdata path[br][br]
+  [b]APR.2021:[/b]Removed dns entries from extra parameters[br][br]
   </Changes>
   <Support>https://lime-technology.com/forum/index.php?topic=50453.0</Support>
   <Name>pihole-template</Name>
@@ -106,7 +106,7 @@
       <Mode>rw</Mode>
     </Volume>
   </Data>
-  <ExtraParams>--cap-add=NET_ADMIN --dns 127.0.0.1 --dns 1.1.1.1 --restart=unless-stopped</ExtraParams>
+  <ExtraParams>--cap-add=NET_ADMIN --restart=unless-stopped</ExtraParams>
   <WebUI>http://[IP]:[PORT:80]/admin</WebUI>
   <Banner>https://i.imgur.com/OWkNcEn.png</Banner>
   <Icon>https://i.imgur.com/OWkNcEn.png</Icon>
