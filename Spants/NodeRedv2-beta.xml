@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>NodeRedv2Beta</Name>
-  <Repository>nodered/node-red-dev</Repository>
+  <Repository>nodered/node-red-dev:beta</Repository>
   <Registry>https://hub.docker.com/r/nodered/node-red-dev/</Registry>
   <Network>bridge</Network>
   <MyIP/>
