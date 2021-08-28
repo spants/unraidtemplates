@@ -10,7 +10,8 @@
   <Support>https://forums.unraid.net/topic/98866-support-spants-photostructure-template</Support>
   <Project>https://photostructure.com/</Project>
   <Overview>Template by Spants.&#xD;
-Beta access to PhotoStructure, your new home for all your photos and videos.   &#xD;
+Recommended to utilize the template from the author of the application (Official PhotoStructure Repository) using the :stable tag
+This application template has been deprecated   &#xD;
 &#xD;
 </Overview>
   <Category>MediaApp:Photos Status:Beta</Category>
@@ -24,7 +25,8 @@ Beta access to PhotoStructure, your new home for all your photos and videos.   &
   <DonateText/>
   <DonateLink/>
   <Description>Template by Spants.&#xD;
-Beta access to PhotoStructure, your new home for all your photos and videos.   &#xD;
+Recommended to utilize the template from the author of the application (Official PhotoStructure Repository) using the :stable tag
+This application template has been deprecated   &#xD;
 &#xD;
 </Description>
   <Networking>
