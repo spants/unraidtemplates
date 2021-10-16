@@ -1,46 +1,54 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>octoprint</Name>
-  <Repository>nunofgs/octoprint</Repository>
-  <Registry>https://hub.docker.com/r/nunofgs/octoprint/</Registry>
+  <Name>OctoPrint-Spants</Name>
+  <Repository>octoprint/octoprint:latest</Repository>
+  <Registry>https://hub.docker.com/r/octoprint/octoprint</Registry>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support/>
-  <Project>https://hub.docker.com/r/nunofgs/octoprint/</Project>
-  <Overview>A docker template for Octoprint by Spants. &#xD;
-This is for the excellent Docker image by nunofgs. Please direct all non unRaid questions to https://github.com/nunofgs/docker-octoprint.&#xD;
-&#xD;
-This template was constructed with knowledge from https://www.reddit.com/r/unRAID/comments/eq5u3r/running_octoprint_in_unraid/ - thanks to Jacob_xATLx and Tergi.&#xD;
-Please see Tergi's post on doing camera passthrough: https://forums.unraid.net/topic/91533-unraid-683-pass-usb-webcam-into-docker/&#xD;
-</Overview>
+  <Support>https://forums.unraid.net/topic/91721-support-octoprint-docker-template-spants/</Support>
+  <Project>https://octoprint.org/</Project>
+  <Overview>&#xD;
+	OctoPrint provides a snappy web interface for controlling consumer 3D printers. 
+        This image **contains** mjpg-streamer.&#xD;
+        Please see support thread on how to make this work.
+        (You will need to install Video plugin for unRaid etc) 
+	An invite to the Discord server can be found at discord.octoprint.org.&#xD;
+	</Overview>
   <Category>Tools:</Category>
-  <Date>2020-04-29</Date>
   <WebUI>http://[IP]:[PORT:5000]</WebUI>
-  <TemplateURL/>
+  <TemplateURL>https://raw.githubusercontent.com/OctoPrint/Unraid-Template/master/OctoPrint/OctoPrint.xml</TemplateURL>
   <Icon>https://octoprint.org/assets/img/logo.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
+  <DateInstalled>1634394090</DateInstalled>
   <DonateText/>
   <DonateLink/>
-  <Description>A docker template for Octoprint by Spants. &#xD;
-This is for the excellent Docker image by nunofgs. Please direct all non unRaid questions to https://github.com/nunofgs/docker-octoprint.&#xD;
-&#xD;
-This template was constructed with knowledge from https://www.reddit.com/r/unRAID/comments/eq5u3r/running_octoprint_in_unraid/ - thanks to Jacob_xATLx and Tergi.&#xD;
-Please see Tergi's post on enabling camera passthrough: https://forums.unraid.net/topic/91533-unraid-683-pass-usb-webcam-into-docker/&#xD;
-</Description>
+  <Requires/>
+  <Description>&#xD;
+	OctoPrint provides a snappy web interface for controlling consumer 3D printers. 
+        This image **contains** mjpg-streamer.&#xD;
+        Please see support thread on how to make this work.
+        (You will need to install Video plugin for unRaid etc) 
+	An invite to the Discord server can be found at discord.octoprint.org.&#xD;
+	</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort>5000</HostPort>
+        <HostPort>5002</HostPort>
         <ContainerPort>5000</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
       <Port>
-        <HostPort>8080</HostPort>
+        <HostPort>5003</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>5004</HostPort>
         <ContainerPort>8080</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
@@ -49,34 +57,35 @@ Please see Tergi's post on enabling camera passthrough: https://forums.unraid.ne
   <Data>
     <Volume>
       <HostDir>/mnt/user/appdata/octoprint</HostDir>
-      <ContainerDir>/data</ContainerDir>
+      <ContainerDir>/octoprint</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
   <Environment>
+    <Variable>
+      <Value>true</Value>
+      <Name>ENABLE_MJPG_STREAMER</Name>
+      <Mode/>
+    </Variable>
     <Variable>
       <Value>/dev/video0</Value>
       <Name>CAMERA_DEV</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value>true</Value>
-      <Name>MJPEG_STREAMER_AUTOSTART</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
       <Value>-y -n -r 640x480</Value>
-      <Name>MJPEG_STREAMER_INPUT</Name>
+      <Name>MJPG_STREAMER_INPUT</Name>
       <Mode/>
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="Main" Target="5000" Default="80" Mode="tcp" Description="Container Port: " Type="Port" Display="always" Required="false" Mask="false">5000</Config>
-  <Config Name="data" Target="/data" Default="" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/octoprint</Config>
-  <Config Name="print" Target="" Default="" Mode="" Description="Container Device: " Type="Device" Display="always" Required="false" Mask="false">/dev/ttyACM0</Config>
-  <Config Name="camera" Target="" Default="" Mode="" Description="Container Device: " Type="Device" Display="always" Required="false" Mask="false">/dev/video0</Config>
-  <Config Name="video" Target="8080" Default="8080" Mode="tcp" Description="Container Port: " Type="Port" Display="always" Required="false" Mask="false">8080</Config>
-  <Config Name="CAMERA_DEV" Target="CAMERA_DEV" Default="/dev/video0" Mode="" Description="The camera device node" Type="Variable" Display="always" Required="false" Mask="false">/dev/video0</Config>
-  <Config Name="MJPEG_STREAMER_AUTOSTART" Target="MJPEG_STREAMER_AUTOSTART" Default="" Mode="" Description="Start the camera automatically" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
-  <Config Name="MJPEG_STREAMER_INPUT" Target="MJPEG_STREAMER_INPUT" Default="-y -n -r 640x480" Mode="" Description="Flags to pass to mjpg_streamer" Type="Variable" Display="always" Required="false" Mask="false">-y -n -r 640x480</Config>
+  <Config Name="config" Target="/octoprint" Default="/mnt/user/appdata/octoprint" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/octoprint</Config>
+  <Config Name="WebUI" Target="5000" Default="5000" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">5002</Config>
+  <Config Name="Printer USB Port" Target="" Default="/dev/ttyACM0" Mode="" Description="" Type="Device" Display="always" Required="true" Mask="false">/dev/serial/by-id/usb-Prusa_Research__prusa3d.com__Original_Prusa_MINI_CZPX1620X017XC06142-if00</Config>
+  <Config Name="ENABLE_MJPG_STREAMER" Target="ENABLE_MJPG_STREAMER" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="CAMERA_DEV" Target="CAMERA_DEV" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">/dev/video0</Config>
+  <Config Name="MJPG_STREAMER_INPUT" Target="MJPG_STREAMER_INPUT" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">-y -n -r 640x480</Config>
+  <Config Name="webcam" Target="80" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">5003</Config>
+  <Config Name="snapshot" Target="8080" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">5004</Config>
+  <Config Name="webcam device" Target="" Default="" Mode="" Description="Webcam is using this device" Type="Device" Display="always" Required="false" Mask="false">/dev/video0</Config>
 </Container>
