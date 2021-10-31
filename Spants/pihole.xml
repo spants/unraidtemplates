@@ -58,12 +58,8 @@
   </Networking>
   <Environment>
     <Variable>
-      <Value>8.8.8.8</Value>
-      <Name>DNS1</Name>
-    </Variable>
-    <Variable>
-      <Value>8.8.4.4</Value>
-      <Name>DNS2</Name>
+      <Value>8.8.8.8;8.8.4.4</Value>
+      <Name>PIHOLE_DNS_</Name>
     </Variable>
     <Variable>
       <Value>Europe/London</Value>
