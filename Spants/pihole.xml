@@ -1,109 +1,48 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Container>
-  <Beta>False</Beta>
-<Category>Network:Other Other:</Category>
-<Date>2020-12-31</Date>
-  <Changes>
-  [center][font size=4]pihole Change Log[/font][/center]
-  [b]APR.2021:[/b]Removed dns entries from extra parameters[br][br]
-  </Changes>
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>pihole</Name>
+  <Repository>pihole/pihole:latest</Repository>
+  <Registry>https://hub.docker.com/r/pihole/pihole/</Registry>
+  <Network>br0</Network>
+  <MyIP>192.168.1.24</MyIP>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
   <Support>https://lime-technology.com/forum/index.php?topic=50453.0</Support>
-  <Name>pihole-template</Name>
-  <Description>
+  <Project/>
+  <Overview>
     Pi-Hole - let's block those pesky ads![br][br]
     This is a template for the official PiHole Docker[br]
     Make sure that you use bridge mode and give PiHole[br]
     it's own IP address.[br]
     Also, if you set you router to give out the PiHole address to clients,[br]
-    make sure that you fixe the unRaid servers dns to point to a real DNS Server.[br]
-  </Description>
-  <Registry>https://hub.docker.com/r/pihole/pihole/</Registry>
-  <GitHub>https://github.com/spants/unraidtemplates</GitHub>
-  <Repository>pihole/pihole:latest</Repository>
-  <Privileged>false</Privileged>
-  <Networking>
-    <Mode>bridge</Mode>
-    <Publish>
-      <Port>
-        <HostPort>53</HostPort>
-        <ContainerPort>53</ContainerPort>
-        <Protocol>tcp</Protocol>
-        <Name>TCP Port</Name>
-      </Port>
-      <Port>
-        <HostPort>53</HostPort>
-        <ContainerPort>53</ContainerPort>
-        <Protocol>udp</Protocol>
-        <Name>UDP Port</Name>
-      </Port>
-      <Port>
-        <HostPort>67</HostPort>
-        <ContainerPort>67</ContainerPort>
-        <Protocol>udp</Protocol>
-        <Name>DHCP</Name>
-      </Port>
-      <Port>
-        <HostPort>80</HostPort>
-        <ContainerPort>80</ContainerPort>
-        <Protocol>tcp</Protocol>
-        <Name>Http Port (should be 80!)</Name>
-      </Port>
-      <Port>
-        <HostPort>443</HostPort>
-        <ContainerPort>443</ContainerPort>
-        <Protocol>tcp</Protocol>
-        <Name>Https Port (should be 443!)</Name>
-      </Port>
-    </Publish>
-  </Networking>
-  <Environment>
-    <Variable>
-      <Value>8.8.8.8;8.8.4.4</Value>
-      <Name>PIHOLE_DNS_</Name>
-    </Variable>
-    <Variable>
-      <Value>Europe/London</Value>
-      <Name>TZ</Name>
-    </Variable>
-    <Variable>
-      <Value>admin</Value>
-      <Name>WEBPASSWORD</Name>
-    </Variable>
-    <Variable>
-      <Value>br0</Value>
-      <Name>INTERFACE</Name>
-    </Variable>
-    <Variable>
-      <Value>192.168.1.24</Value>
-      <Name>ServerIP</Name>
-    </Variable>
-    <Variable>
-      <Value></Value>
-      <Name>ServerIPv6</Name>
-    </Variable>
-    <Variable>
-      <Value>False</Value>
-      <Name>IPv6</Name>
-    </Variable>
-    <Variable>
-      <Value>all</Value>
-      <Name>DNSMASQ_LISTENING</Name>
-    </Variable>
-  </Environment>
-  <Data>
-    <Volume>
-      <HostDir>/mnt/user/appdata/pihole/pihole/</HostDir>
-      <ContainerDir>/etc/pihole/</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <HostDir>/mnt/user/appdata/pihole/dnsmasq.d/</HostDir>
-      <ContainerDir>/etc/dnsmasq.d/</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-  </Data>
-  <ExtraParams>--cap-add=NET_ADMIN --restart=unless-stopped</ExtraParams>
+    make sure that you fix the unRaid servers dns to point to a real DNS Server.[br]
+	Please check https://hub.docker.com/r/pihole/pihole for additioanl variables that you may need.[br]
+  </Overview>
+  <Category>Network:Other Other:</Category>
   <WebUI>http://[IP]:[PORT:80]/admin</WebUI>
-  <Banner>https://i.imgur.com/OWkNcEn.png</Banner>
+  <TemplateURL/>
   <Icon>https://i.imgur.com/OWkNcEn.png</Icon>
+  <ExtraParams>--cap-add=NET_ADMIN --restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1641566424</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="TCP DNS Port" Target="53" Default="53" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">53</Config>
+  <Config Name="UDP DNS Port" Target="53" Default="53" Mode="udp" Description="" Type="Port" Display="always" Required="true" Mask="false">53</Config>
+  <Config Name="Required Port" Target="67" Default="67" Mode="udp" Description="" Type="Port" Display="always" Required="true" Mask="false">67</Config>
+  <Config Name="HTTP port" Target="80" Default="80" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">80</Config>
+  <Config Name="HTTPS Port" Target="443" Default="443" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">443</Config>
+  <Config Name="Host Pihole directory" Target="/etc/pihole/" Default="/mnt/user/appdata/pihole/pihole/" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/pihole/pihole/</Config>
+  <Config Name="Host dnsmasq directory" Target="/etc/dnsmasq.d/" Default="/mnt/user/appdata/pihole/dnsmasq.d/" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/pihole/dnsmasq.d/</Config>
+  <Config Name="PIHOLE_DNS_" Target="PIHOLE_DNS_" Default="8.8.8.8;8.8.4.4" Mode="" Description="Upstream DNS server(s) for Pi-hole to forward queries to, seperated by a semicolon&#13;&#10;(supports non-standard ports with #[port number]) e.g 127.0.0.1#5053;8.8.8.8;8.8.4.4" Type="Variable" Display="always" Required="false" Mask="false">8.8.8.8;8.8.4.4</Config>
+  <Config Name="Timezone" Target="TZ" Default="Europe/London" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">Europe/London</Config>
+  <Config Name="WEBPASSWORD" Target="WEBPASSWORD" Default="admin" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">admin</Config>
+  <Config Name="INTERFACE" Target="INTERFACE" Default="br0" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">br0</Config>
+  <Config Name="ServerIP" Target="ServerIP" Default="192.168.1.24" Mode="" Description="Set to your Pihole containers LAN IP, used by web block modes and lighttpd bind address" Type="Variable" Display="always" Required="false" Mask="false">192.168.1.24</Config>
+  <Config Name="ServerIPv6" Target="ServerIPv6" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="IPv6" Target="IPv6" Default="False" Mode="" Description="For unraid compatibility, strips out all the IPv6 configuration from DNS/Web services when false." Type="Variable" Display="always" Required="false" Mask="false">False</Config>
+  <Config Name="DNSMASQ_LISTENING" Target="DNSMASQ_LISTENING" Default="all" Mode="" Description="local listens on all local subnets, all permits listening on internet origin subnets in addition to local, single listens only on the interface specified." Type="Variable" Display="always" Required="false" Mask="false">all</Config>
+  <Config Name="WEBUI BOXED LAYOUT" Target="WEBUIBOXEDLAYOUT" Default="boxed" Mode="" Description="Use boxed layout (helpful when working on large screens)" Type="Variable" Display="always" Required="false" Mask="false">boxed</Config>
 </Container>
