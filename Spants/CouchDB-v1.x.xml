@@ -8,9 +8,9 @@
   [b]04.JAN.2017:[/b]First template[br]
 </Changes>
 <Support>https://lime-technology.com/forum/index.php?topic=38486.0</Support>
-<Name>CouchDB Offical Do cker v1.x</Name>
+<Name>CouchDB Offical Docker v1.x</Name>
 <Description>
-  CouchDB offical docker   image[br][br]
+  CouchDB offical docker image[br][br]
   Apache CouchDB has a document-oriented NoSQL database architecture and is Open Source.[br]
 </Description>
 <Registry>https://hub.docker.com/_/couchdb/</Registry>
