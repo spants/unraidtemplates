@@ -18,7 +18,7 @@
     make sure that you fix the unRaid servers dns to point to a real DNS Server.[br]
 	Please check https://hub.docker.com/r/pihole/pihole for additioanl variables that you may need.[br]
   </Overview>
-  <Category>Network:Other Other:</Category>
+  <Category>Network:Privacy Other:</Category>
   <WebUI>http://[IP]:[PORT:80]/admin</WebUI>
   <TemplateURL/>
   <Icon>https://i.imgur.com/OWkNcEn.png</Icon>
