@@ -37,7 +37,7 @@
   </Volume>
   <Volume>
     <HostDir>/mnt/user/appdata/couchdb/config</HostDir>
-    <ContainerDir>/usr/local/etc/couchdb</ContainerDir>
+    <ContainerDir>/opt/couchdb/etc/local.d</ContainerDir>
     <Mode>rw</Mode>
   </Volume>
 </Data>
