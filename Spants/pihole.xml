@@ -40,8 +40,8 @@
   <Config Name="Timezone" Target="TZ" Default="Europe/London" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">Europe/London</Config>
   <Config Name="WEBPASSWORD" Target="WEBPASSWORD" Default="admin" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">admin</Config>
   <Config Name="INTERFACE" Target="INTERFACE" Default="br0" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">br0</Config>
-  <Config Name="ServerIP" Target="ServerIP" Default="192.168.1.24" Mode="" Description="Set to your Pihole containers LAN IP, used by web block modes and lighttpd bind address" Type="Variable" Display="always" Required="false" Mask="false">192.168.1.24</Config>
-  <Config Name="ServerIPv6" Target="ServerIPv6" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="FTLCONF_LOCAL_IPV4" Target="FTLCONF_LOCAL_IPV4" Default="192.168.1.24" Mode="" Description="Set to your Pihole containers LAN IP, used by web block modes and lighttpd bind address" Type="Variable" Display="always" Required="false" Mask="false">192.168.1.24</Config>
+  <Config Name="FTLCONF_LOCAL_IPV6" Target="FTLCONF_LOCAL_IPV6" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="IPv6" Target="IPv6" Default="False" Mode="" Description="For unraid compatibility, strips out all the IPv6 configuration from DNS/Web services when false." Type="Variable" Display="always" Required="false" Mask="false">False</Config>
   <Config Name="DNSMASQ_LISTENING" Target="DNSMASQ_LISTENING" Default="all" Mode="" Description="local listens on all local subnets, all permits listening on internet origin subnets in addition to local, single listens only on the interface specified." Type="Variable" Display="always" Required="false" Mask="false">all</Config>
   <Config Name="WEBUI BOXED LAYOUT" Target="WEBUIBOXEDLAYOUT" Default="boxed" Mode="" Description="Use boxed layout (helpful when working on large screens)" Type="Variable" Display="always" Required="false" Mask="false">boxed</Config>
